@@ -5,24 +5,22 @@ For all indices i, 0 <= i < dimensions.length, dimensions[i][0] represents the l
 Return the area of the rectangle having the longest diagonal. If there are multiple rectangles with the longest diagonal, return the area of the rectangle having the maximum area.*/
 
 var areaOfMaxDiagonal = function (dimensions) {
-  let maxDiagonal = 0;
-  let area = 0;
+    let maxDiagonal = 0, maxArea = 0;
 
-  for (let i = 0; i < dimensions.length; i++) {
-    let length = dimensions[i][0];
-    let width = dimensions[i][1];
-    let diagonal = Math.sqrt(length * length + width * width);
-    let currentArea = length * width;
+    for (let i = 0; i < dimensions.length; i++) {
+        let [length, width] = dimensions[i];
+        let diagonal = length * length + width * width;
+        let area = length * width;
 
-    if (diagonal > maxDiagonal) {
-      maxDiagonal = diagonal;
-      area = currentArea;
-    } else if (diagonal === maxDiagonal && currentArea > area) {
-      area = currentArea;
+        if (diagonal > maxDiagonal || (diagonal === maxDiagonal && area > maxArea)) {
+            maxDiagonal = diagonal;
+            maxArea = area;
+        }
     }
-  }
-  return area;
+
+    return maxArea;
 };
+
 console.log(
   areaOfMaxDiagonal([
     [1, 2],
