@@ -18,3 +18,4 @@ function plusOne(digits) {
 
 // console.log(plusOne([1, 2, 3])); returns [1, 2, 4]
 // console.log(plusOne([9, 9, 9])); returns [1, 0, 0, 0]
+console.log(plusOne([4, 3, 2, 1])); // returns [4, 3, 2, 2]
