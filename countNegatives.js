@@ -15,5 +15,3 @@ var countNegatives = function (grid) {
 
 // console.log(countNegatives([[4, 3, 2, -1], [3, 2, 1, -1], [1, 1, -1, -2], [-1, -1, -2, -3]])); // 8
 // console.log(countNegatives([[3, 2], [1, 0]])); // 0
-
-console.log(typeof count);

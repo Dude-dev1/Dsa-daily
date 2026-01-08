@@ -23,22 +23,3 @@ var minimumOperations = function (nums) {
 /*var minimumOperations = function(nums) {
  return nums.reduce((acc, num) => acc + (num % 3 !== 0 ? 1 : 0), 0);
 */
-
-var countOperations = function (num1, num2) {
-  let rem = num2 > num1 ? num2 - num1 : num1 - num2;
-  let count = 0;
-
-  while (rem >= 3) {
-    if (num2 > num1) {
-      num2 = num2 - 3;
-    } else {
-      num1 = num1 - 3;
-    }
-    rem = num2 > num1 ? num2 - num1 : num1 - num2;
-    count++;
-  }
-
-  return count;
-};
-console.log(countOperations(2, 3)); // 3
-console.log(countOperations(10, 10)); // 0

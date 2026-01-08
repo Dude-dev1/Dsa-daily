@@ -26,10 +26,13 @@ var validateCoupons = function (code, businessLine, isActive) {
 
   return result.sort();
 };
-console.log(
+
+/*
+ console.log(
   validateCoupons(
     ["SAVE20", "", "PHARMA5", "SAVE@20"],
     ["restaurant", "grocery", "pharmacy", "restaurant"],
     [true, true, true, true]
   )
-);
+); result [ 'PHARMA5', 'SAVE20' ]
+*/
