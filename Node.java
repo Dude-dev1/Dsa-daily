@@ -1,5 +1,4 @@
-class Node{
-
+class Node{\
     int data;
     boolean visited;
 

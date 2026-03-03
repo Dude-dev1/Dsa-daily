@@ -11,22 +11,22 @@ public class NewGraph {
 		matrix = new int[size][size];
 	}
 	public void addNode(NewNode node) {
-        
+
 		nodes.add(node);
 	}	
 	public void addEdge(int src, int dst) {
 		
 		matrix[src][dst] = 1;
 	}	
-	public boolean checkEdge(int src, int dst) {
+	// public boolean checkEdge(int src, int dst) {
 		
-		if(matrix[src][dst] == 1) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}	
+	// 	if(matrix[src][dst] == 1) {
+	// 		return true;
+	// 	}
+	// 	else {
+	// 		return false;
+	// 	}
+	// }	
 	public void print() {	
 		
 		System.out.print("  ");
@@ -63,7 +63,6 @@ public class NewGraph {
 				dFSHelper(i, visited);
 			}
 		}
-		return;
 	}
 }
 
