@@ -18,6 +18,7 @@ const binarySearch = (array, target) => {
     } else {
       return middle;
     }
+    console.log(low, high);
   }
   return -1;
 };
